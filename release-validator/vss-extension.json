@@ -1,0 +1,37 @@
+{
+  "manifestVersion": 1,
+  "id": "release-validator-decorator",
+  "name": "Release validator decorator",
+  "version": "1.0.0",
+  "publisher": "YOUR_PUBLISHER_HERE",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Release validator decorator",
+  "public": false,
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "contributions": [
+    {
+      "id": "release-validator-decorator-task",
+      "type": "ms.azure-pipelines.pipeline-decorator",
+      "targets": [
+        "ms.azure-pipelines-agent-job.pre-post-job-tasks",
+        "ms.azure-release-pipelines-agent-job.pre-job-tasks"
+      ],
+      "properties": {
+        "template": "release-validator-decorator.yml"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "release-validator-decorator.yml",
+      "addressable": true,
+      "contentType": "text/plain"
+    }
+  ]
+}
